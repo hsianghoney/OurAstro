@@ -1,0 +1,11 @@
+C:\Users\user\Downloads\Code\Team3Astro\bin\Debug\Team3Astro.exe.config
+C:\Users\user\Downloads\Code\Team3Astro\bin\Debug\Team3Astro.exe
+C:\Users\user\Downloads\Code\Team3Astro\bin\Debug\Team3Astro.pdb
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.FileName.resources
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.Frm_Main.resources
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.Properties.Resources.resources
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.csproj.GenerateResource.cache
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.exe
+C:\Users\user\Downloads\Code\Team3Astro\obj\Debug\Team3Astro.pdb

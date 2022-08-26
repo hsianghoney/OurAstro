@@ -13,10 +13,12 @@ namespace WebApplication1.Models
         public bool ProSex { get; set; }
         public string ProExperience { get; set; }
         public string ProSkill { get; set; }
-        public decimal ProCost { get; set; }
+        public int ProCost { get; set; }
         public string ProSelect { get; set; }
         public string ProPhone { get; set; }
         public string ProEmail { get; set; }
         public string ProPassword { get; set; }
+        public string ProAccount { get; set; }
+        public string ProAddress { get; set; }
     }
 }

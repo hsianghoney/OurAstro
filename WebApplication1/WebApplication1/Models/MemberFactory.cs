@@ -31,7 +31,8 @@ namespace WebApplication1.Models
                     MemberBirthPlace = reader["MemberBirthPlace"].ToString(),
                     MemberPhone = reader["MemberPhone"].ToString(),
                     MemberEmail = reader["MemberEmail"].ToString(),
-                    MemberPWD = reader["MemberPWD"].ToString()
+                    MemberPWD = reader["MemberPWD"].ToString(),
+                    MemberAccount = reader["MemberAccount"].ToString()
                 };
                 list.Add(member);
             }
@@ -61,7 +62,8 @@ namespace WebApplication1.Models
             sql += " MemberBirthPlace,";
             sql += " MemberPhone,";
             sql += " MemberEmail,";
-            sql += " MemberPWD";
+            sql += " MemberPWD,";
+            sql += " MemberAccount";
             sql += ") values (";
             sql += " @M_MEMBERNAME,";
             sql += " @M_MEMBERSEX,";
@@ -70,7 +72,8 @@ namespace WebApplication1.Models
             sql += " @M_MEMBERBIRTHPLACE,";
             sql += " @M_MEMBERPHONE,";
             sql += " @M_MEMBEREMAIL,";
-            sql += " @M_MEMBERPWD) ";
+            sql += " @M_MEMBERPWD), ";
+            sql += " @M_MEMBERACCOUNT) ";
 
             paras.Add(new SqlParameter("M_MEMBERNAME", m.MemberName));
             paras.Add(new SqlParameter("M_MEMBERSEX", m.MemberSex));
@@ -80,6 +83,7 @@ namespace WebApplication1.Models
             paras.Add(new SqlParameter("M_MEMBERPHONE", m.MemberPhone));
             paras.Add(new SqlParameter("M_MEMBEREMAIL", m.MemberEmail));
             paras.Add(new SqlParameter("M_MEMBERPWD", m.MemberPWD));
+            paras.Add(new SqlParameter("M_MEMBERACCOUNT", m.MemberAccount));
             executeSql(sql, paras);
         }
 
@@ -96,6 +100,8 @@ namespace WebApplication1.Models
             paras.Add(new SqlParameter("M_MEMBERPHONE", m.MemberPhone));
             paras.Add(new SqlParameter("M_MEMBEREMAIL", m.MemberEmail));
             paras.Add(new SqlParameter("M_MEMBERPWD", m.MemberPWD));
+            paras.Add(new SqlParameter("M_MEMBERACCOUNT", m.MemberAccount));
+
             executeSql(sql, paras);
         }
 

@@ -7,5 +7,7 @@ namespace WebApplication1.ViewModels
 {
     public class MemberLogin
     {
+        public string txtAccount { get; set; }
+        public string txtPWD { get; set; }
     }
 }

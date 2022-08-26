@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family:思源宋體;
+}
+
+.header {}
+
+.hotProduct {
+    
+}
+
+.wrap {
+    width: 100%;
+
+    
+}
+.tittle{
+    width: 100%;
+    
+    
+}
+.tittle h1{
+    text-align:center ;
+   
+}
+
+.item-group {
+    width: 100%;
+    padding: 20px 50px;
+    /* display: flex; */
+   
+}
+@media screen and (min-width:765px) {
+    .item-group {display:flex;}
+    
+}
+
+.product .item{
+    display: flex;
+    
+}
+
+.pic img{
+    width: 100%;
+    border-radius: 50%;
+    padding: 40px 40px;
+}
+.txt-group{
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 120px;
+    border: 1px solid #f00;
+    
+}
+
+.score{
+    
+    display:flex;
+}
+.count{
+    display:flex;
+}
+.txt{
+    text-align: center;
+}
+
+
+.recommend {}
+
+.Product {}

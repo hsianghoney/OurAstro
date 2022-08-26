@@ -1,0 +1,65 @@
+** 隱私政策
+https://www.privacypolicies.com/live/5b2f9901-2c20-4e5e-9e29-929707975b8a
+
+
+**設定 Facebook JavaScript SDK(添加到HTML)
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{your-app-id}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+**以下擷取自上述程式碼範例，為在頁面載入時用來檢查用戶登入狀態所執行的部分程式碼：
+
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+**提供給回呼的 response 物件含有數個欄位
+
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+
+**按鈕上的 onlogin 屬性是用於設定檢查登入狀態的 JavaScript 回呼，以瞭解用戶是否已經成功登入
+
+
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+
+**就是這個回呼，它會呼叫 FB.getLoginStatus() 來取得最新的登入狀態（範例中處理這個回應的是 statusChangeCallback() 函式）。
+
+
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}

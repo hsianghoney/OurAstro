@@ -1,0 +1,52 @@
+<header>
+        <div>
+            <nav class="">
+                <div>
+                    <button class="">
+                        <a href="#"></a>
+                        <span>Astria 藏星</span>
+                    </button>    
+                    <button class="" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""></span>
+                      </button>                
+                </div>
+                
+                <div class="">
+                    <form class="">
+                        <input class="" type="search" placeholder="Search" aria-label="Search">
+                        <button class="" type="submit">查詢</button>
+                    </form>
+                    <ul class="">
+                        <li class="">
+                            <a href="http://" class="list">星盤查詢</a>
+                        </li>
+                        <li class="">
+                            <a href="http://" class="list">運勢查詢</a>
+                        </li>
+                        <li class="">
+                            <a href="http://" class="list">占卜服務</a>
+                        </li>
+                        <li class="">
+                            <a href="http://">
+                                <img src="./images/user.png" alt="user">
+                                <div class="">
+                                    <a class="" href="#">個人資料管理</a>
+                                    <div class=""></div>                                
+                                    <a class="" href="#">我的星盤</a>
+                                    <div class=""></div>
+                                    <a class="" href="#">好友星盤</a>
+                                    <div class=""></div>
+                                    <a class="" href="#">雙人合盤</a>
+                                    <div class=""></div>
+                                    <a class="" href="#">我的預約</a>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            
+        </div>
+
+    </header>

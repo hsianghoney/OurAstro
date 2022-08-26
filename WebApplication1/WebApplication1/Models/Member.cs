@@ -16,7 +16,7 @@ namespace WebApplication1.Models
         public string MemberBirthPlace { get; set; }
         public string MemberPhone { get; set; }
         public string MemberEmail { get; set; }
-        public string MemberPassword { get; set; }
-
+        public string MemberPWD { get; set; }
+        public string MemberAccount { get; set; }
     }
 }

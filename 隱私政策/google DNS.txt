@@ -1,0 +1,8 @@
+google 驗證 DNS
+
+
+DNS網域添加
+google-site-verification=sdcNPAJcavlPm0g16TYPnQfIr_cjujFHM4M4lBbgQI8
+
+HTML標記
+<meta name="google-site-verification" content="sdcNPAJcavlPm0g16TYPnQfIr_cjujFHM4M4lBbgQI8" />

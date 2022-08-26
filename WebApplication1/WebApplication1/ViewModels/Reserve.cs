@@ -14,6 +14,6 @@ namespace WebApplication1.ViewModels
         public string ProSkill { get; set; }
         public DateTime ReserveDate { get; set; }
         public decimal ProCost { get; set; }
-        public string ReservePlace { get; set; }
+        public string ProAddress { get; set; }
     }
 }
