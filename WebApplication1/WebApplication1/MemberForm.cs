@@ -18,6 +18,7 @@ namespace WebApplication1
         public MemberForm()
         {
             this.MemberAstroDetail = new HashSet<MemberAstroDetail>();
+            this.PwdForm = new HashSet<PwdForm>();
             this.ReserveForm = new HashSet<ReserveForm>();
         }
     
@@ -30,11 +31,13 @@ namespace WebApplication1
         public string MemberBirthPlace { get; set; }
         public string MemberPhone { get; set; }
         public string MemberEmail { get; set; }
-        public string MemberPWD { get; set; }
         public string MemberAccount { get; set; }
     
+        public virtual Login平台 Login平台 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MemberAstroDetail> MemberAstroDetail { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PwdForm> PwdForm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ReserveForm> ReserveForm { get; set; }
     }

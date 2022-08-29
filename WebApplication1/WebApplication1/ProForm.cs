@@ -17,6 +17,7 @@ namespace WebApplication1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ProForm()
         {
+            this.ProSkillList = new HashSet<ProSkillList>();
             this.ReserveForm = new HashSet<ReserveForm>();
         }
     
@@ -31,9 +32,10 @@ namespace WebApplication1
         public string ProAddress { get; set; }
         public string ProPhone { get; set; }
         public string ProEmail { get; set; }
-        public string ProPassword { get; set; }
         public string ProAccount { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProSkillList> ProSkillList { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ReserveForm> ReserveForm { get; set; }
     }

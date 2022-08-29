@@ -16,8 +16,8 @@ namespace WebApplication1
     {
         public int lID { get; set; }
         public string MemberEmail { get; set; }
-        public string MemberName { get; set; }
-        public string MemberPWD { get; set; }
-        public Nullable<int> MemberID { get; set; }
+        public string MemberWebName { get; set; }
+    
+        public virtual MemberForm MemberForm { get; set; }
     }
 }

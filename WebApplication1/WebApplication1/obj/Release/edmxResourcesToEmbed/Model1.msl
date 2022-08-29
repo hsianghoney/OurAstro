@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OurAstroModelStoreContainer" CdmEntityContainer="OurAstroEntities">
+    <EntitySetMapping Name="Login平台">
+      <EntityTypeMapping TypeName="OurAstroModel.Login平台">
+        <MappingFragment StoreEntitySet="Login平台">
+          <ScalarProperty Name="lID" ColumnName="lID" />
+          <ScalarProperty Name="MemberEmail" ColumnName="MemberEmail" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="MemberPWD" ColumnName="MemberPWD" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberAstroDetail">
+      <EntityTypeMapping TypeName="OurAstroModel.MemberAstroDetail">
+        <MappingFragment StoreEntitySet="MemberAstroDetail">
+          <ScalarProperty Name="aID" ColumnName="aID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="MemberBirth" ColumnName="MemberBirth" />
+          <ScalarProperty Name="MemberBirthTime" ColumnName="MemberBirthTime" />
+          <ScalarProperty Name="MemberBirthPlace" ColumnName="MemberBirthPlace" />
+          <ScalarProperty Name="MemberAstro" ColumnName="MemberAstro" />
+          <ScalarProperty Name="MemberAstronut" ColumnName="MemberAstronut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemberForm">
+      <EntityTypeMapping TypeName="OurAstroModel.MemberForm">
+        <MappingFragment StoreEntitySet="MemberForm">
+          <ScalarProperty Name="mID" ColumnName="mID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="MemberSex" ColumnName="MemberSex" />
+          <ScalarProperty Name="MemberBirth" ColumnName="MemberBirth" />
+          <ScalarProperty Name="MemberBirthTime" ColumnName="MemberBirthTime" />
+          <ScalarProperty Name="MemberBirthPlace" ColumnName="MemberBirthPlace" />
+          <ScalarProperty Name="MemberPhone" ColumnName="MemberPhone" />
+          <ScalarProperty Name="MemberEmail" ColumnName="MemberEmail" />
+          <ScalarProperty Name="MemberPWD" ColumnName="MemberPWD" />
+          <ScalarProperty Name="MemberAccount" ColumnName="MemberAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProForm">
+      <EntityTypeMapping TypeName="OurAstroModel.ProForm">
+        <MappingFragment StoreEntitySet="ProForm">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="ProSex" ColumnName="ProSex" />
+          <ScalarProperty Name="ProExperience" ColumnName="ProExperience" />
+          <ScalarProperty Name="ProSkill" ColumnName="ProSkill" />
+          <ScalarProperty Name="ProCost" ColumnName="ProCost" />
+          <ScalarProperty Name="ProSelect" ColumnName="ProSelect" />
+          <ScalarProperty Name="ProAddress" ColumnName="ProAddress" />
+          <ScalarProperty Name="ProPhone" ColumnName="ProPhone" />
+          <ScalarProperty Name="ProEmail" ColumnName="ProEmail" />
+          <ScalarProperty Name="ProPassword" ColumnName="ProPassword" />
+          <ScalarProperty Name="ProAccount" ColumnName="ProAccount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProSkillList">
+      <EntityTypeMapping TypeName="OurAstroModel.ProSkillList">
+        <MappingFragment StoreEntitySet="ProSkillList">
+          <ScalarProperty Name="sID" ColumnName="sID" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="ProSkill" ColumnName="ProSkill" />
+          <ScalarProperty Name="ProCost" ColumnName="ProCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReserveForm">
+      <EntityTypeMapping TypeName="OurAstroModel.ReserveForm">
+        <MappingFragment StoreEntitySet="ReserveForm">
+          <ScalarProperty Name="rID" ColumnName="rID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="ProID" ColumnName="ProID" />
+          <ScalarProperty Name="ProName" ColumnName="ProName" />
+          <ScalarProperty Name="ProSkill" ColumnName="ProSkill" />
+          <ScalarProperty Name="ReserveDate" ColumnName="ReserveDate" />
+          <ScalarProperty Name="ProCost" ColumnName="ProCost" />
+          <ScalarProperty Name="ProAddress" ColumnName="ProAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="OurAstroModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempForm">
+      <EntityTypeMapping TypeName="OurAstroModel.TempForm">
+        <MappingFragment StoreEntitySet="TempForm">
+          <ScalarProperty Name="tID" ColumnName="tID" />
+          <ScalarProperty Name="tName" ColumnName="tName" />
+          <ScalarProperty Name="tBirth" ColumnName="tBirth" />
+          <ScalarProperty Name="tBirthTime" ColumnName="tBirthTime" />
+          <ScalarProperty Name="tBirthPlace" ColumnName="tBirthPlace" />
+          <ScalarProperty Name="tAstro" ColumnName="tAstro" />
+          <ScalarProperty Name="tAstronut" ColumnName="tAstronut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

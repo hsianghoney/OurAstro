@@ -19,5 +19,7 @@ namespace WebApplication1
         public string ProName { get; set; }
         public string ProSkill { get; set; }
         public Nullable<decimal> ProCost { get; set; }
+    
+        public virtual ProForm ProForm { get; set; }
     }
 }

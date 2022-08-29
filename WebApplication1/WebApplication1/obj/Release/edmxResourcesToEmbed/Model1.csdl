@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OurAstroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Login平台">
+    <Key>
+      <PropertyRef Name="lID" />
+    </Key>
+    <Property Name="lID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemberName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MemberPWD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemberID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="MemberAstroDetail">
+    <Key>
+      <PropertyRef Name="aID" />
+    </Key>
+    <Property Name="aID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="MemberName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MemberBirth" Type="DateTime" Precision="0" />
+    <Property Name="MemberBirthTime" Type="Time" Precision="7" />
+    <Property Name="MemberBirthPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MemberAstro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MemberAstronut" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MemberForm" Relationship="Self.FK_MemberAstroDetail_MemberForm" FromRole="MemberAstroDetail" ToRole="MemberForm" />
+  </EntityType>
+  <EntityType Name="MemberForm">
+    <Key>
+      <PropertyRef Name="mID" />
+    </Key>
+    <Property Name="mID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="MemberName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MemberSex" Type="Boolean" />
+    <Property Name="MemberBirth" Type="DateTime" Precision="0" />
+    <Property Name="MemberBirthTime" Type="Time" Precision="7" />
+    <Property Name="MemberBirthPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MemberPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MemberEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemberPWD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemberAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MemberAstroDetail" Relationship="Self.FK_MemberAstroDetail_MemberForm" FromRole="MemberForm" ToRole="MemberAstroDetail" />
+    <NavigationProperty Name="ReserveForm" Relationship="Self.FK_ReserveForm_MemberForm" FromRole="MemberForm" ToRole="ReserveForm" />
+  </EntityType>
+  <EntityType Name="ProForm">
+    <Key>
+      <PropertyRef Name="pID" />
+    </Key>
+    <Property Name="pID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProID" Type="Int32" />
+    <Property Name="ProName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProSex" Type="Boolean" />
+    <Property Name="ProExperience" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="ProSkill" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ProSelect" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProAccount" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ReserveForm" Relationship="Self.FK_ReserveForm_ProForm" FromRole="ProForm" ToRole="ReserveForm" />
+  </EntityType>
+  <EntityType Name="ProSkillList">
+    <Key>
+      <PropertyRef Name="sID" />
+    </Key>
+    <Property Name="sID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProID" Type="Int32" />
+    <Property Name="ProName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProSkill" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProCost" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="ReserveForm">
+    <Key>
+      <PropertyRef Name="rID" />
+    </Key>
+    <Property Name="rID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" />
+    <Property Name="ProID" Type="Int32" />
+    <Property Name="ProName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProSkill" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReserveDate" Type="DateTime" Precision="7" />
+    <Property Name="ProCost" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="ProAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MemberForm" Relationship="Self.FK_ReserveForm_MemberForm" FromRole="ReserveForm" ToRole="MemberForm" />
+    <NavigationProperty Name="ProForm" Relationship="Self.FK_ReserveForm_ProForm" FromRole="ReserveForm" ToRole="ProForm" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TempForm">
+    <Key>
+      <PropertyRef Name="tID" />
+    </Key>
+    <Property Name="tID" Type="Int32" Nullable="false" />
+    <Property Name="tName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="tBirth" Type="DateTime" Precision="0" />
+    <Property Name="tBirthTime" Type="Time" Precision="7" />
+    <Property Name="tBirthPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tAstro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="tAstronut" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_MemberAstroDetail_MemberForm">
+    <End Role="MemberForm" Type="Self.MemberForm" Multiplicity="0..1" />
+    <End Role="MemberAstroDetail" Type="Self.MemberAstroDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberForm">
+        <PropertyRef Name="mID" />
+      </Principal>
+      <Dependent Role="MemberAstroDetail">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReserveForm_MemberForm">
+    <End Role="MemberForm" Type="Self.MemberForm" Multiplicity="0..1" />
+    <End Role="ReserveForm" Type="Self.ReserveForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MemberForm">
+        <PropertyRef Name="mID" />
+      </Principal>
+      <Dependent Role="ReserveForm">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReserveForm_ProForm">
+    <End Role="ProForm" Type="Self.ProForm" Multiplicity="0..1" />
+    <End Role="ReserveForm" Type="Self.ReserveForm" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProForm">
+        <PropertyRef Name="pID" />
+      </Principal>
+      <Dependent Role="ReserveForm">
+        <PropertyRef Name="ProID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OurAstroEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Login平台" EntityType="Self.Login平台" />
+    <EntitySet Name="MemberAstroDetail" EntityType="Self.MemberAstroDetail" />
+    <EntitySet Name="MemberForm" EntityType="Self.MemberForm" />
+    <EntitySet Name="ProForm" EntityType="Self.ProForm" />
+    <EntitySet Name="ProSkillList" EntityType="Self.ProSkillList" />
+    <EntitySet Name="ReserveForm" EntityType="Self.ReserveForm" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TempForm" EntityType="Self.TempForm" />
+    <AssociationSet Name="FK_MemberAstroDetail_MemberForm" Association="Self.FK_MemberAstroDetail_MemberForm">
+      <End Role="MemberForm" EntitySet="MemberForm" />
+      <End Role="MemberAstroDetail" EntitySet="MemberAstroDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReserveForm_MemberForm" Association="Self.FK_ReserveForm_MemberForm">
+      <End Role="MemberForm" EntitySet="MemberForm" />
+      <End Role="ReserveForm" EntitySet="ReserveForm" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReserveForm_ProForm" Association="Self.FK_ReserveForm_ProForm">
+      <End Role="ProForm" EntitySet="ProForm" />
+      <End Role="ReserveForm" EntitySet="ReserveForm" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
